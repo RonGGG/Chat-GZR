@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.net.Socket;
+import java.net.URL;
 import java.util.*;
 public class LoginInterface extends WindowAdapter implements ActionListener{
     private Frame f1;
@@ -37,7 +38,8 @@ public class LoginInterface extends WindowAdapter implements ActionListener{
         l2.setBounds(20, 170, 50, 20);
         f1.add(l2);
 
-        imageIcon = new ImageIcon("/Users/ron/IdeaProjects/Chat-GZR/src/Chat/maozhuxi.jpg");
+        URL url = this.getClass().getResource("maozhuxi.jpg");
+        imageIcon = new ImageIcon(url);
         imgLabel = new JLabel(imageIcon);
         imgLabel.setBounds((400-imageIcon.getIconWidth())/2,30,imageIcon.getIconWidth(),imageIcon.getIconHeight());
 
